@@ -1,5 +1,6 @@
 const fs = require('fs')
 const express = require('express')
+const cors = require('cors')
 
 const app = express()
 const port = 3000
@@ -26,19 +27,26 @@ function addContact(contact) {
 initCSV()
 
 app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+app.use(express.urlencoded({ extended: false }))
+app.use(cors())
 
 app.get('/ping', (req, res) => {
-	res.send('pong!')
+	res.json('pong!')
 })
 
-app.post('/contact', (req, res) => {
-	addContact({
-		nom: req.body.nom.toString(),
-		prenom: req.body.prenom.toString(),
-		email: req.body.email.toString()
-	})
-	res.send(httpSuccess)
+app.post('/contact', (req, res, next) => {
+	try {
+		addContact({
+			nom: req.body.nom.toString(),
+			prenom: req.body.prenom.toString(),
+			email: req.body.email.toString()
+		})
+	} catch (error) {
+		console.log('Cannot parse req.body')
+		res.json(httpBadRequest)
+		return
+	}
+	res.json(httpSuccess)
 })
 
 app.listen(port, () => {
