@@ -1,22 +1,77 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="src/logo-simple.svg" />
+	<!-- Importation des feuilles de style sass et bootstrap -->
+	<link rel="stylesheet" href="./style/style.css">
+	<link rel="stylesheet" href="./style/custom.css">
+	<!-- Lien avec le page JS qui récupère les données du formulaire -->
 	<script src="./index.js" defer></script>
 	<title>RolePocket</title>
 </head>
 
 <body>
-	<h1>RolePocket</h1>
-	<form id="form">
-		<input type="email" id="email" name="email" placeholder="email">
-		<input type="text" id="nom" name="nom" placeholder="nom">
-		<input type="text" id="prenom" name="prenom" placeholder="prenom">
-		<button type="submit">envoyer</button>
-	</form>
+	
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+			<a class="navbar-brand" href="#">
+				<img src="src/logo-full.svg" alt="Logo de RolePocket" >
+			</a>
+            <div class="pe-4">
+                <span class="navbar-nav me-auto mb-2 mb-lg-0">
+				</span>
+                <button class="me-2 nav-item button-primary" type="submit">Recevoir des news</button>
+            </div>
+        </div>
+    </nav>
+
+		<div class="container header-content">
+			<div class="row">
+			<div class="col-6 content-left">
+				<h1 class="poppins-title-dark">Enfin ton JDR dans ta poche !</h1>
+				<h3 class="poppins-subtitle-dark">Une application pour préparer et gérer vos <br> campagnes, en ligne ou autour de la table.</h3>
+				<button class="button-primary" type="submit">Let's Roll !</button>
+			</div>
+			<div class="col-md-6 ml-auto">
+				<img src="src/phone-dice.png" alt="Image">
+			</div>
+			</div>
+		</div>
+			<div class="bg-dark bg-dark-custom">
+				<div class="container">
+					<div class="row">
+						<div class="col-6">
+							<form id="form">
+									<div class="form-style">
+										<div class="col-md-5">
+											<label for="prenom" class="poppins-white">Prénom</label>
+											<input type="text" class="imput-style" id="prenom" name="prenom" placeholder="Ton prénom">
+										</div>
+										<div class="col-md-5">
+											<label for="nom" class="poppins-white">Nom</label>
+											<input type="text" class="imput-style" id="nom" name="nom" placeholder="Ton nom">
+										</div>	
+									</div>
+									<div class="col-md-12">
+										<label for="email" class="poppins-white">Email</label>
+										<input type="email" class="imput-style-mail" id="email" name="email" placeholder="tonmail@mail.com">
+									</div>
+									<br>
+									<button type="submit" class="button-primary-lg">Envoyer</button>
+							</form>
+						</div>
+						<div class="col-md-6 ml-auto content-right">
+							<h1 class="poppins-title-white">Tu veux des news du projet ?</h1>
+							<h3 class="poppins-subtitle-white ">Rejoins nous en t’inscrivant à 	notre Newsletter <br>
+							et tiens toi au courant de toute les nouveautés de <br> l’application ! Tu sera aussi le premier a connaître <br>la  date de sortie de RolePocket !</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			
 </body>
 
 </html>
