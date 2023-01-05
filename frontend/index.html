@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" href="assets/logo-simple.svg" />
+	<link rel="stylesheet" href="stylesheet.css">
+
+	<script src="./index.js" defer></script>
+
+	<title>RolePocket</title>
+</head>
+
+<body>
+	<header id="mainheader">
+		<div class="brand">
+			<img src="assets/logo-simple.svg" alt="RolePocket logo">
+			<h1>RolePocket</h1>
+		</div>
+		<a class="button-primary" href="#contact">Recevoir des News</a>
+	</header>
+	<main>
+		<section id="landing">
+			<div>
+				<h2>Enfin ton <span style="color:var(--brand-color)">JDR</span> dans ta poche !</h2>
+				<p>Une application pour préparer et gérer vos campagnes, en ligne ou autour de la table.</p>
+				<a class="button-primary" href="#contact">Let's Roll!</a>
+			</div>
+			<img src="assets/phone-dice.png" alt="Illustration application">
+		</section>
+		<section id="contact">
+			<form id="form">
+				<div class="split-inputs">
+					<div class="label-input">
+						<label for="prenom">Prénom</label>
+						<input type="text" id="prenom" name="prenom" placeholder="Prénom">
+					</div>
+					<div class="label-input">
+						<label for="nom">Nom</label>
+						<input type="text" id="nom" name="nom" placeholder="Nom">
+					</div>
+				</div>
+				<div>
+					<div class="label-input">
+						<label for="email">Email</label>
+						<input type="email" id="email" name="email" placeholder="Email">
+					</div>
+				</div>
+				<button class="button-primary" type="submit" disabled>Envoyer</button>
+			</form>
+			<header>
+				<h2>Tu veux des news du projet ?</h2>
+				<p>Rejoins nous en t’inscrivant à notre Newsletter et tiens toi au courant de toute les nouveautés de
+					l’application ! Tu sera aussi le premier a connaître la date de sortie de <span
+						style="color:var(--brand-color)">RolePocket</span> !</p>
+			</header>
+		</section>
+	</main>
+</body>
+
+</html>
